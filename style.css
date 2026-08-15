@@ -1,9 +1,77 @@
-h1,h2,h3{
-    color:rgb(241, 64, 173);
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
-p{
-    color:brown;
+body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    margin:0;
 }
-li,h4{
-    color:rgb(60, 7, 19);
+.flag{
+    width:350px;
+    height:250px;
+    box-shadow:0px 10px 30px #0000;
+    padding:0px 0px 100px 0px;
+    margin-left:-1px;
+    display:flex;
+    align-items:flex-start;
+}
+.pole{
+    width:5px;
+    height:400px;
+    background: white;
+    margin-right:0px;
+}
+.cloth{
+    height:150px;
+    width:250px;
+}
+.saffron{
+    height:33.33%;
+    background:#ff671f;
+}
+.white{
+    height:33.33%;
+    background: white;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.green{
+    height:33.33%;
+    background: rgb(2, 52, 2);
+}
+.chakra{
+    width:50px;
+    height:50px;
+    border:2px solid navy;
+    border-radius: 50%;
+    position:relative;
+    margin:auto;
+    overflow: hidden;
+}
+.chakra::before{
+    content:"";
+    width:7px;
+    height:9px;
+    background:navy;
+    border-radius:50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.spokes span{
+    position:absolute;
+    width:1px;
+    height:50px;
+    background:navy;
+    left: 50%;
+    top:0;
+    transform-origin:center;
+    transform:translateX(-50%) rotate(calc(var(--i)*15deg))
 }
